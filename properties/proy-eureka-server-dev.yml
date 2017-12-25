@@ -1,6 +1,5 @@
 spring:
-  profiles: dev
-  
+  profiles: default
 server:
   port: 5001
 eureka:
@@ -10,4 +9,43 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+       
+spring:
+  profiles: primary
+server:
+  port: 5002
+eureka:
+  instance:
+    hostname: eureka-primary
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+       defaultZone: http://eureka-secundary:5003/eureka/,http://eureka-terciary:5004/eureka/
+       
+spring:
+  profiles: secundary
+server:
+  port: 5003
+eureka:
+  instance:
+    hostname: eureka-secundary
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+       defaultZone: http://eureka-terciary:5004/eureka/,http://eureka-primary:5002/eureka/
+       
+spring:
+  profiles: terciary
+server:
+  port: 5004
+eureka:
+  instance:
+    hostname: eureka-terciary
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+       defaultZone: http://eureka-secundary:5003/eureka/,http://eureka-primary:5001/eureka/
