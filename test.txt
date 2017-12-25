@@ -1,0 +1,61 @@
+hp@hp-HP MINGW64 ~ (master)
+$ cd C:/JOEDAYZ_CLASES/config
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config
+$ git clone https://github.com/denisusmpWS/config-server.git
+Cloning into 'config-server'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config
+$ cd
+config-server/ properties/
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config
+$ cd config-server/
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config/config-server (master)
+$ git init
+Reinitialized existing Git repository in C:/JOEDAYZ_CLASES/config/config-server/.git/
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config/config-server (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config/config-server (master)
+$ git commit -m 'se sube test'
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+        test.txt
+
+nothing added to commit but untracked files present
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config/config-server (master)
+$ git add test.txt
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config/config-server (master)
+$ git commit -m 'se sube'
+[master 0722482] se sube
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+
+hp@hp-HP MINGW64 /c/JOEDAYZ_CLASES/config/config-server (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 265 bytes | 265.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/denisusmpWS/config-server.git
+   cd1b23f..0722482  master -> master
