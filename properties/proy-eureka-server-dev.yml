@@ -1,5 +1,6 @@
 spring:
-  profiles: default
+  application:
+    name: proy-eureka-server
 server:
   port: 5001
 eureka:
@@ -10,4 +11,3 @@ eureka:
     fetch-registry: false
     service-url:
        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-       
