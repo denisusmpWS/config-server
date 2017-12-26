@@ -1,0 +1,31 @@
+#SPRING CONFIGURATION
+spring:
+  application:
+    name: proy-oracle-provider
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    username: bd_oracle
+    password: oracle123
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: false
+    cache: false
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+#SPRING CLOUD
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekahost:5001/eureka
+#BANNER
+banner:
+  location: banner/banner.txt
+server:
+  port: 5002
