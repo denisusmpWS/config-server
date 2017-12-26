@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eurekahost:5001/eureka
+      defaultZone: http://localhost:5001/eureka
 #BANNER
 banner:
   location: banner/banner.txt
