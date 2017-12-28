@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: proy-feign-service-client
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: true
+    cache: true
+    thymeleaf:
+      prefix: classpath:/templates/
+      suffix: .html
+
+server:
+  port: 5005
+  controller.context-path: /api/feign/galaxy
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+      
