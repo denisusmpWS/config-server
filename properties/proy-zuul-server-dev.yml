@@ -7,7 +7,7 @@ zuul:
   routes:
     oracle:
       path: /api/base/**
-      service-id: PROY-ORACLE-PROVIDER
+      #service-id: PROY-ORACLE-PROVIDER
       strip-prefix: false
       url: http://localhost:5002
  
@@ -29,7 +29,13 @@ server:
   port: 5003
   
 eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2 #intento de conectarse cada 2 segundos
   client:
     service-url:
       defaultZone: http://localhost:5001/eureka
+      
+info:
+  component: proy-zuul-server
       
