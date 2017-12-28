@@ -10,7 +10,21 @@ zuul:
       service-id: PROY-ORACLE-PROVIDER
       strip-prefix: false
       url: http://localhost:5002
-      
+ 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+            
+ribbon:
+  eureka:
+    anable: true
+    ReadTimeout: 20000
+    ConnectTimeout: 2000
+    
 server:
   port: 5003
   
