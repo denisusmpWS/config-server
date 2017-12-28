@@ -3,6 +3,7 @@ spring:
     name: proy-zuul-provider
 
 zuul:
+  prefix: /bcp.com.pe #PREFIJO DE CONTEXTO BASE ADICIONAL DE ZUUL Ejm: http://localhost:5000/bcp.com.pe/api/base/galaxy
   routes:
     oracle:
       path: /api/base/**
