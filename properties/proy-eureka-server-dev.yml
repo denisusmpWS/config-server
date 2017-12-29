@@ -13,6 +13,6 @@ eureka:
        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     enable-self-preservation: false
-  instance:
-    ip-address: 192.168.1.37
-    prefer-ip-address: false
+  #instance:
+   # ip-address: 192.168.1.37
+   # prefer-ip-address: false
