@@ -36,6 +36,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:5001/eureka
       
-info:
-  component: proy-zuul-server
       

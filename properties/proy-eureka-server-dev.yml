@@ -5,9 +5,14 @@ server:
   port: 5001
 eureka:
   instance:
-    hostname: eurekahost
+    hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+  instance:
+    ip-address: 192.168.1.37
+    prefer-ip-address: false
