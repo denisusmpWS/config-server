@@ -37,3 +37,4 @@ eureka:
       defaultZone: http://localhost:5001/eureka
       
       
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
