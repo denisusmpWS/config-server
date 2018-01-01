@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: proy-h2-provider
+  
+  
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: true
+    cache: true
+    prefix: classpath:/templates/
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
+      
+server:
+  port: 5005
+  
