@@ -1,8 +1,6 @@
 spring:
   application:
     name: proy-h2-provider
-  
-  
   freemarker:
     enabled: false
   thymeleaf:
