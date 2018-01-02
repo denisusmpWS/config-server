@@ -17,6 +17,15 @@ spring:
     driver-class-name: org.h2.Driver
     username: denish2
     password: denish2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
   
 eureka:
   client:
@@ -29,5 +38,5 @@ eureka:
       instanceId: ${spring.application.name}:${server.port}
       
 server:
-  port: 5005
+  port: 5004
   
