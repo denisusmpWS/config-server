@@ -18,5 +18,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:5001/eureka
-
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
+      
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000

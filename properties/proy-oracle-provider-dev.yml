@@ -29,7 +29,7 @@ eureka:
     lease-renewal-interval-in-seconds: 1
     lease-expiration-duration-in-seconds: 2
     metadata-map:
-      instanceId: ${spring.application.name}:${serve.port}
+      instanceId: ${spring.application.name}:${server.port}
 #PORT
 server:
   port: 5002

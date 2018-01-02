@@ -1,7 +1,7 @@
 spring:
   application:
     name: proy-zuul-server
-
+#MATRICULAR APIS TIPO PROVIDER
 zuul:
   prefix: /bcp.com.pe #PREFIJO DE CONTEXTO BASE ADICIONAL DE ZUUL Ejm: http://localhost:5000/bcp.com.pe/api/base/galaxy
   routes:
@@ -10,6 +10,11 @@ zuul:
       service-id: PROY-ORACLE-PROVIDER
       strip-prefix: false
       url: http://localhost:5002
+    h2:
+      path: /proy-api/customer-service/v1/**
+      service-id: PROY-H2-PROVIDER
+      strip-prefix: false
+      url: http://localhost:5004
  
 #hystrix:
  # command:
@@ -32,6 +37,8 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 1
     lease-expiration-duration-in-seconds: 2 #intento de conectarse cada 2 segundos
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
   client:
     service-url:
       defaultZone: http://localhost:5001/eureka
