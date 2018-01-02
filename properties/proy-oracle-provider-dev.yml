@@ -7,15 +7,16 @@ spring:
     username: bd_oracle
     password: oracle123
     driver-class-name: oracle.jdbc.driver.OracleDriver
-    hikari:
+    hikari: #CONFIGURATION DE POOL DE CONEXIONES
       connection-timeout: 60000
       maximum-pool-size: 5
   freemarker:
     enabled: false
   thymeleaf:
-    enabled: false
-    cache: false
-  mvc:
+    enabled: false #true
+    cache: false #true
+    #prefix: classpath:/templates/
+  mvc: #USO DE JSP (PAGINA DE ARRANQUE)
     view:
       prefix: /WEB-INF/view/
       suffix: .jsp
@@ -24,8 +25,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:5001/eureka
-#BANNER
-banner:
-  location: banner/banner.txt
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    metadata-map:
+      instanceId: ${spring.application.name}:${serve.port}
+#PORT
 server:
   port: 5002
+  controller.context-path: /api/base
+  

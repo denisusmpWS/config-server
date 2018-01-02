@@ -39,4 +39,5 @@ eureka:
       
 server:
   port: 5004
+  controller.context-path: /proy-api/customer-service/v1
   
