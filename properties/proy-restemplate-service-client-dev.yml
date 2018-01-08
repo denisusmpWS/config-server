@@ -1,6 +1,14 @@
 spring:
   application:
     name: proy-restemplate-service-client
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    username: bd_galaxy
+    password: galaxy123
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari: #CONFIGURATION DE POOL DE CONEXIONES
+      connection-timeout: 60000
+      maximum-pool-size: 5
   freemarker:
     enabled: false
   thymeleaf:
@@ -21,3 +29,4 @@ eureka:
       
 server:
   port: 5006
+  controller.context-path: /restemplate/client
