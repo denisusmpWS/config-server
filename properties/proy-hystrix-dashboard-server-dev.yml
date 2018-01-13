@@ -4,8 +4,8 @@ spring:
   freemarker:
     enabled: false
   thymeleaf:
-    enabled: true
-    cache: true
+    enabled: false
+    cache: false
     prefix: classpath:/templates/
       
 eureka:
