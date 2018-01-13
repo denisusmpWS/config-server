@@ -6,7 +6,7 @@ spring:
   thymeleaf:
     enabled: false
     cache: false
-    prefix: classpath:/templates/
+   # prefix: classpath:/templates/
       
 eureka:
   client:
