@@ -12,9 +12,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:5001/eureka
-  instance:
-    lease-renewal-interval-in-seconds: 1
-    lease-expiration-duration-in-seconds: 2
+  #instance:
+   # lease-renewal-interval-in-seconds: 1
+   # lease-expiration-duration-in-seconds: 2
     metadata-map:
       instanceId: ${spring.application.name}:${server.port}
 
