@@ -1,23 +1,22 @@
 spring:
   application:
     name: proy-hystrix-dashboard-server
-  freemarker:
-    enabled: false
-  thymeleaf:
-    enabled: false
-    cache: false
+  #freemarker:
+   # enabled: false
+  #thymeleaf:
+   # enabled: false
+   # cache: false
    # prefix: classpath:/templates/
       
-#eureka:
-  #client:
-   # service-url:
-    #  defaultZone: http://localhost:5001/eureka
-  #instance:
-   # lease-renewal-interval-in-seconds: 1
-   # lease-expiration-duration-in-seconds: 2
-   # metadata-map:
-   #   instanceId: ${spring.application.name}:${server.port}
-
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:5001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
 
 server:
   port: 5007
