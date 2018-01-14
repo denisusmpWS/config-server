@@ -7,7 +7,7 @@ spring:
    # enabled: false
    # cache: false
    # prefix: classpath:/templates/
-      
+
 eureka:
   client:
     service-url:
@@ -17,6 +17,11 @@ eureka:
     lease-expiration-duration-in-seconds: 2
     metadata-map:
       instanceId: ${spring.application.name}:${server.port}
+
+turbine:
+  aggregator: 
+    cluster-config: PROY-FEIGN-SERVER-CLIENT, PROY-RESTEMPLATE-SERVICE-CLIENT #SE AGREGAN TODOS LOS SERVICIOS CLIENTES QUE IMPLEMENTEN HYSTRIX
+  app-config: microservice_client_eureka_s1  #NOMBRE DE LA LISTA QUE CONTIENE TODOS LOS SERVICIOS REGISTRADOS EN EUREKA, SI TUVIERAMOS MAS DE 1 EUREKA SERVER RESULTA UTIL
 
 server:
   port: 5007
