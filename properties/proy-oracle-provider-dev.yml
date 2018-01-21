@@ -34,4 +34,12 @@ eureka:
 server:
   port: 5002
   controller.context-path: /api/base
+#SWAGGER - SE AÑADEN SETEO DE PROPIEDADES SOLO DE MAPEO REFERENCIAL, NO SON AUTOMATICOS PROPIOS DE LA LIBRERIA
+application:
+  swagger:
+    title: Services Galaxys
+    description: Api de gestion de los servicios Galaxys
+    version: v1
+    default:
+      codes: 201,400,500
   
