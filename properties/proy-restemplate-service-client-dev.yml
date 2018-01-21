@@ -7,8 +7,8 @@ spring:
     password: galaxy123
     driver-class-name: oracle.jdbc.driver.OracleDriver
     hikari: #CONFIGURATION DE POOL DE CONEXIONES
-      connection-timeout: 60000
-      maximum-pool-size: 5
+      connection-timeout: 110000
+      maximum-pool-size: 10
   freemarker:
     enabled: false
   thymeleaf:
@@ -30,3 +30,11 @@ eureka:
 server:
   port: 5006
   controller.context-path: /restemplate/client
+  
+application:
+  swagger:
+    title: Services SuperGalaxy Portal
+    description: API para la gestion de los servicios SuperGalalxy
+    version: v1
+    default:
+      codes: 200,404
