@@ -46,5 +46,5 @@ application:
 value:
   spring:
     cloud:
-      bus: denis bienvenido a spring cloud bus!
+      bus: denis bienvenido a spring cloud bus Modified!
   
