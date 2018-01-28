@@ -20,4 +20,8 @@ eureka:
     instance:
       metadata-map:
         instanceId: ${spring.application.name}:${server.port}
+		
+application:
+  oracle:
+    endpoint: http://localhost:5002
  
