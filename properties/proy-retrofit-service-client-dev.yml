@@ -7,12 +7,13 @@ spring:
     enabled: true
     cache: true
     prefix: classpath:/templates/
-    suffix: .html
+    suffix: .html	
+	
     
 server:
-  port: 5007
+  port: 5008
   controller.context-path: /client/retrofit
-  
+  service.endpoint-oracle: http://localhost:5002
 eureka:
   client:
     service-url:
@@ -20,8 +21,4 @@ eureka:
     instance:
       metadata-map:
         instanceId: ${spring.application.name}:${server.port}
-		
-application:
-  oracle:
-    endpoint: http://localhost:5002
  
