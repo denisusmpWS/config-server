@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: proy-retrofit-service-client
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: true
+    cache: true
+    prefix: classpath:/templates/
+    suffix: .html
+    
+server:
+  port: 5007
+  controller.context-path: /client/retrofit
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+    instance:
+      metadata-map:
+        instanceId: ${spring.application.name}:${server.port}
+ 
