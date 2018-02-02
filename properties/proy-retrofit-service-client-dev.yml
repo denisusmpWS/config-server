@@ -22,3 +22,7 @@ eureka:
 server:
   port: 5008
   controller.context-path: /client/retrofit
+
+oracle:
+  uri:
+    provider: http://localhost:5002/
