@@ -7,7 +7,7 @@ spring:
       password: test
       port: 9042
       keyspace-name: test_cassandra
-      contact-points: localhost
+      contact-points: 127.0.0.1
   freemarket:
     enabled: false
   thymeleaf:
