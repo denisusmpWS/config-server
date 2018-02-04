@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: proy-cassandra-service-provider
+  freemarket:
+    enabled: false
+  thymeleaf:
+    enabled: true
+    cache: true
+    prefix: classpath:/templates/
+    sufix: .html
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+  cassandra:
+    username: test
+    password: test
+    port: 9042
+    address: 192.168.1.34 #192.168.1.35,192.168.1.36
+    keySpace: test_cassandra
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
+
+server:
+  port: 5009
+  controller.context-path: /api/point-service/v1
+
+
+
+
+
+
