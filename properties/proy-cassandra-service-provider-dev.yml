@@ -8,10 +8,7 @@ spring:
     cache: true
     prefix: classpath:/templates/
     sufix: .html
-  jpa:
-    properties:
-      hibernate:
-        show_sql: true
+
   cassandra:
     username: test
     password: test
