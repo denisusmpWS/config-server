@@ -8,7 +8,6 @@ spring:
     cache: true
     prefix: classpath:/templates/
     sufix: .html
-
   cassandra:
     username: test
     password: test
