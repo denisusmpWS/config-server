@@ -46,4 +46,4 @@ application:
 value:
   spring:
     cloud:
-      bus: jose
+      bus: jose manuel
