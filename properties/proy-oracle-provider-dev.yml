@@ -42,9 +42,8 @@ application:
     version: v1
     default:
       codes: 201,400,500
-     
+  
 value:
   spring:
     cloud:
-      bus: denis bienvenido a spring cloud bus Modified 222222222333333333!
-  
+      bus: denis
