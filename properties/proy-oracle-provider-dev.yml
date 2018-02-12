@@ -46,4 +46,4 @@ application:
 value:
   spring:
     cloud:
-      bus: denis raul choquehuanca vargas
+      bus: jose
