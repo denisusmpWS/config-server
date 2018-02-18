@@ -6,8 +6,8 @@ spring:
   thymeleaf:
     enabled: false
     cache: false
-  jpa: #MAPED HIBERNATE DIALECT
-    show-sql: true
+  #jpa: #MAPED HIBERNATE DIALECT
+   # show-sql: true
   #  database-platform: org.hibernate.dialect.Oracle10gDialect
    # hibernate:
     # ddl-auto: update
