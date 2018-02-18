@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: proy-reactive-oracle-provider
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: false
+    cache: false
+  jpa: #MAPED HIBERNATE DIALECT
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+    hibernate:
+     ddl-auto: update
+  datasource: #CONECT BD ORACLE
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    username: bd_tienda
+    password: bd_tienda
+    driver-class-name: oracle.jdbc.driver.OracleDriver   
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+#REGISTRY      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
+#PORT / PATH BASE
+server:
+  port: 8012
+  controller.context-path: /reactive-service/v1
+  
+#SWAGGER
+application:
+  swagger:
+    title:
+    description:
+    version:
+    default:
+      codes: 201,200,400,500
+#EXAMPLE
