@@ -7,10 +7,10 @@ spring:
     enabled: false
     cache: false
   jpa: #MAPED HIBERNATE DIALECT
-    database-platform: org.hibernate.dialect.Oracle10gDialect
     show-sql: true
-    hibernate:
-     ddl-auto: update
+  #  database-platform: org.hibernate.dialect.Oracle10gDialect
+   # hibernate:
+    # ddl-auto: update
   datasource: #CONECT BD ORACLE
     url: jdbc:oracle:thin:@localhost:1521/XE
     username: bd_tienda
