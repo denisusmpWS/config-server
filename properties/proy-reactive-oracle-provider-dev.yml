@@ -15,7 +15,10 @@ spring:
     url: jdbc:oracle:thin:@localhost:1521/XE
     username: bd_tienda
     password: bd_tienda
-    driver-class-name: oracle.jdbc.driver.OracleDriver   
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari: #CONFIGURATION DE POOL DE CONEXIONES
+     connection-timeout: 60000
+     maximum-pool-size: 5   
   mvc:
     view:
       prefix: /WEB-INF/view/
@@ -43,4 +46,4 @@ application:
     version:
     default:
       codes: 201,200,400,500
-#EXAMPLE
+  
