@@ -17,7 +17,6 @@ spring:
     enabled: true
     prefix: classpath://templates/  
     suffix: .html
-    
 eureka:
   client:
     service-url:
@@ -27,15 +26,13 @@ eureka:
     lease-expiration-duration-in-seconds: 2
     metadata-map:
       instanceId: ${spring.application.name}:${server.port}
+server:
+  port: 5014
+  controller.context-path: /operation-service/v1 
 application:
   ws:
     endpoint: http://localhost:7005/ws
     package: com.mysql.ws.model.thirdparty.seriva
-server:
-  port: 5014
-  controller.context-path: /operation-service/v1
-  
-application:
   swagger:
     title: Service Products
     description: Api para Gestion de Productos
