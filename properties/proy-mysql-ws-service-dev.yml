@@ -27,7 +27,10 @@ eureka:
     lease-expiration-duration-in-seconds: 2
     metadata-map:
       instanceId: ${spring.application.name}:${server.port}
-      
+application:
+  ws:
+    endpoint: http://localhost:7005/ws
+    package: com.mysql.ws.model.thirdparty.seriva
 server:
   port: 5014
   controller.context-path: /operation-service/v1
