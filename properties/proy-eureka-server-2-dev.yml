@@ -1,15 +1,15 @@
 spring:
   application:
-    name: proy-eureka-server 
+    name: proy-eureka-server-2 
 eureka:
   instance:
     hostname: localhost
     metadata-map:  
-      instanceId: ${spring.application.name}:${server.port}
+      instanceId: proy-eureka-server-2:1001
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:1001/eureka/ 
 server:
-  port: 1001  
+  port: 1001 
