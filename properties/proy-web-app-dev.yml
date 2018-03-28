@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: proy-web-app
+  datasource:
+    url: jdbc:mysql://localhost:3302/bd_calypso
+    username: root
+    password: root123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect #permite entender el mapeo de las tablas
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      #naming:
+       # implicit-strategy: org.hibernate.boot.
+       # physical-strategy: org.hibernate.boot.
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: false
+    cache: false
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+       
+server:
+  port: 5020
