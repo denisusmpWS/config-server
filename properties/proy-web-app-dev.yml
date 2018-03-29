@@ -2,7 +2,7 @@ spring:
   application:
     name: proy-web-app
   datasource:
-    url: jdbc:mysql://localhost:3302/sofia_bd
+    url: jdbc:mysql://localhost:3302/bd_sofia
     username: root
     password: root123
     driver-class-name: com.mysql.jdbc.Driver
@@ -21,7 +21,7 @@ spring:
     cache: false
   mvc:
     view:
-      prefix: /WEB-INF/views/
+      prefix: /WEB-INF/views/ #ruteo de views
       suffix: .jsp
        
 server:
