@@ -2,7 +2,7 @@ spring:
   application:
     name: proy-web-app
   datasource:
-    url: jdbc:mysql://localhost:3302/bd_calypso
+    url: jdbc:mysql://localhost:3302/sofia_bd
     username: root
     password: root123
     driver-class-name: com.mysql.jdbc.Driver
