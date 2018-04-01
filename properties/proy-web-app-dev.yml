@@ -2,7 +2,7 @@ spring:
   application:
     name: proy-web-app
   datasource:
-    url: jdbc:mysql://localhost:3302/bd_sofia
+    url: jdbc:mysql://localhost:3302/bd_sofia2
     username: root
     password: root123
     driver-class-name: com.mysql.jdbc.Driver
@@ -11,6 +11,7 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
       #naming:
        # implicit-strategy: org.hibernate.boot.
        # physical-strategy: org.hibernate.boot.
