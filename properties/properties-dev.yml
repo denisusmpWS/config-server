@@ -1,8 +1,11 @@
 application:
   swagger:
-    title: 
-    groupName:
-    description:
-    version: 
+    title: ${application.swagger.title}
+    groupName: ${application.swagger.groupName}
+    description: ${application.swagger.description}
+    version: ${application.swagger.version}
     default: 
-      codes: 
+      codes: ${application.swagger.default.codes}
+server:
+  controller:
+    context-path: ${server.controller.context-path}
