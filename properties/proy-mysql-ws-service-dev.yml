@@ -35,6 +35,7 @@ application:
     package: com.mysql.ws.model.thirdparty.seriva
   swagger:
     title: Service Products
+    groupName: Products
     description: Api para Gestion de Productos
     version: v1
     default:  
