@@ -8,6 +8,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect #permite entender el mapeo de las tablas
+    generate-ddl: true
     show-sql: true
     hibernate:
       ddl-auto: update
