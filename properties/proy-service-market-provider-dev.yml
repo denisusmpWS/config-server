@@ -1,0 +1,43 @@
+#CONFIGURACION CON COMPONENTES CLOUD Y PROPIEDADES INTERNAS DEL API
+spring:
+  application:
+    name: proy-service-market-provider
+  freemarker:
+    enabled: false
+  thymeleaf:
+    enabled: true
+    cache: true
+    prefix: classpath:/templates/  
+    suffix: .html
+  datasource:
+    url: jdbc:mysql://localhost:3302/alejandria
+    username: root
+    password: root123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect #permite entender el mapeo de las tablas
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    metadata-map:
+      instanceId: ${spring.application.name}:${server.port}
+server:
+  port: 5020
+  servlet:
+    path: /api #contexto base de spring
+  controller.context-path: /market-service/v1/ #contexto base del controller
+application:
+  swagger: 
+    title: Service Market
+    groupName: Market
+    description: Api para Gestion de un MiniMarket
+    version: v1
+    default:
+      codes: 200,201,400,500
